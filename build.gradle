@@ -28,8 +28,7 @@ minecraft {
     replace '${version}', project.version
 }
 
-processResources
-{
+processResources {
     inputs.property "version", project.version
     inputs.property "mcversion", project.minecraft.version
 

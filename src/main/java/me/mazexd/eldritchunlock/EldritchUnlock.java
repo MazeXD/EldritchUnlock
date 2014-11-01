@@ -3,6 +3,7 @@ package me.mazexd.eldritchunlock;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import me.mazexd.eldritchunlock.command.UnlockCommand;
 import me.mazexd.eldritchunlock.util.PlayerUtil;
 import me.mazexd.eldritchunlock.util.ResearchUtil;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -45,7 +46,7 @@ public class EldritchUnlock {
     public void serverStarting(FMLServerStartingEvent e) {
         if (MODE != UnlockMode.COMMAND || !Config.wuss) return;
 
-        // TODO: Register command
+        e.registerServerCommand(new UnlockCommand());
     }
 
     public static boolean unlockEldritch(EntityPlayerMP player) {

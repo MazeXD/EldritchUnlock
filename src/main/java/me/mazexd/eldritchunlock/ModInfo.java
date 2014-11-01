@@ -5,5 +5,5 @@ public final class ModInfo {
     public static final String NAME = "EldritchUnlock";
     public static final String VERSION = "${version}";
 
-    public static final String DEPENDENCIES = "require-after:Thaumcraft";
+    public static final String DEPENDENCIES = "required-after:Thaumcraft";
 }

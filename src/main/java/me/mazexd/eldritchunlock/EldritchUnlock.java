@@ -3,10 +3,13 @@ package me.mazexd.eldritchunlock;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import me.mazexd.eldritchunlock.command.UnlockCommand;
+import me.mazexd.eldritchunlock.item.UnlockItem;
 import me.mazexd.eldritchunlock.util.PlayerUtil;
 import me.mazexd.eldritchunlock.util.ResearchUtil;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.Item;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 import thaumcraft.common.config.Config;
@@ -16,7 +19,8 @@ public class EldritchUnlock {
 
     public static final String[] ELDRITCH_RESEARCH = {"ELDRITCHMINOR", "ELDRITCHMAJOR"};
 
-    public static UnlockMode MODE;
+    private UnlockMode MODE;
+    private UnlockItem itemEldritchUnlocker;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e) {
@@ -39,7 +43,8 @@ public class EldritchUnlock {
 
         if (MODE != UnlockMode.ITEM || !Config.wuss) return;
 
-        // TODO: Register item
+        itemEldritchUnlocker = new UnlockItem();
+        GameRegistry.registerItem(itemEldritchUnlocker, "eldritchUnlocker");
     }
 
     @Mod.EventHandler

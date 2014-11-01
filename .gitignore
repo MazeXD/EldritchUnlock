@@ -1,0 +1,27 @@
+# Gradle
+/.gradle/
+/build/
+/libs/*.jar
+
+# Eclipse
+/.settings/
+/eclipse/
+/.classpath
+/.project
+
+# IntelliJ IDEA
+*.iml
+*.ipr
+*.iws
+
+# Java
+*.class
+
+# Minecraft
+/bin/
+/run/
+/config/
+/crash-reports/
+/logs/
+/saves/
+/options.txt

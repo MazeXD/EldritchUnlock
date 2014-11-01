@@ -1,0 +1,16 @@
+[
+{
+  "modid": "eldritchunlock",
+  "name": "EldritchUnlock",
+  "description": "An utility mod which provides methods to unlock the eldritch tab of Thaumcraft with enabled wuss mode.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["MazeXD"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
